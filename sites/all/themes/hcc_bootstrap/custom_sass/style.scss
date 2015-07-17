@@ -1,1 +1,82 @@
+@import '../bootstrap_sass/bootstrap.scss';
 /* Styles */
+
+/* Mixins */
+
+@mixin menustyle {
+	float: left;
+	list-style: none;
+}
+
+/* Footer */
+
+.footer {
+  padding-bottom: 55px;
+  border-top: none;
+  margin-top: 0;
+
+}
+
+.footer-legal {
+    font-size: 1.3em;
+    color: #fff;
+    p {
+      margin: 0;
+    }
+    a {
+      color: #fff;
+    }
+	ul {
+		padding-left: 0;
+		float: right;
+	}
+	li {
+		padding: 0 10px;
+		border-right: #fff 1px solid;
+        @include menustyle;
+	}
+	li:first-child {
+	 padding-left: 0;
+	}
+	li:last-child {
+		border: none;
+	}
+	.legal {
+		text-align: right;
+		font-size: 75%;
+        a {
+          text-decoration: underline;
+        }
+	}
+}
+
+
+/* Phone */
+
+@media (max-width: 767px) {
+
+.footer-logos {
+    a {
+      //display: inline-block;
+    }
+
+    img {
+      margin: 20px auto;
+    }
+  }
+
+  .footer-legal {
+    text-align: center;
+    margin-top: 15px;
+      
+    ul {
+      float: none;
+      margin-right: auto;
+      margin-left: auto;
+      display: inline-block;
+    }
+    .legal {
+      text-align: center;
+    }
+  }
+}

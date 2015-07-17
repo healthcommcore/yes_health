@@ -54,11 +54,17 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="<?php echo drupal_get_path('theme', 'hcc_bootstrap') . 'js/html5shiv.min.js'; ?>"></script>
+    <script src="<?php echo drupal_get_path('theme', 'hcc_bootstrap') . 'js/respond.min.js'; ?>"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+  <!--[if lt IE 9]>
+    <body class="<?php print $classes . ' ieclass'; ?>" <?php print $attributes;?>>
+  <![endif]-->
+  <!--[if !IE]>-->
+    <body class="<?php print $classes; ?>" <?php print $attributes;?>>
+  <!--<![endif]-->
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>

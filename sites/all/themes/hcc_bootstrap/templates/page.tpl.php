@@ -141,9 +141,9 @@
 				<?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
 				<a id="main-content"></a>
 				<?php print render($title_prefix); ?>
-				<?php if( !drupal_is_front_page()) : ?>
+				<?php //if( !drupal_is_front_page()) : ?>
 					<div class="main-content-margin">
-						<?php if (!empty($title)): ?>
+						<?php if (!empty($title) && !drupal_is_front_page()): ?>
 							<h1 class="page-header"><?php print $title; ?></h1>
 						<?php endif; ?>
 						<?php print render($title_suffix); ?>
@@ -158,7 +158,7 @@
 							<ul class="action-links"><?php print render($action_links); ?></ul>
 						<?php endif; ?>
 						<?php print render($page['content']); ?>
-					<?php endif; ?>
+					<?php //endif; ?>
 					<?php if (!empty($page['news'])): ?>
 						<div class="panel panel-default homepage-news">
 							<?php print render($page['news']); ?>
