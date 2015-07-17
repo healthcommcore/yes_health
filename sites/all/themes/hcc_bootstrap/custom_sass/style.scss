@@ -1,11 +1,63 @@
 @import '../bootstrap_sass/bootstrap.scss';
-/* Styles */
+@import 'fonts.scss';
+
+/* Variables */
+$al-thin : 'alegreya_sansthin';
+$al-lt : 'alegreya_sanslight';
+$al-reg : 'alegreya_sansregular';
+$al-ital : 'alegreya_sansitalic';
+$al-med : 'alegreya_sansmedium';
+$al-bold : 'alegreya_sansbold';
+$alsc-reg : 'alegreya_sans_scregular';
+$alsc-bold : 'alegreya_sans_scbold';
+
+$rust : #B7331F;
+$green : #79A718;
+$link : #1766AB;
 
 /* Mixins */
 
 @mixin menustyle {
 	float: left;
 	list-style: none;
+}
+
+/* Overall styles */
+
+body {
+  font-family: $al-lt;
+  font-size: 3.3em;
+  line-height: 1.4em;
+}
+
+a {
+  font-family: $alsc-bold;
+  text-transform: uppercase;
+  color: $link;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+strong {
+  font-family: $al-med;
+}
+
+strong {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.6em;
+  color: $rust;
+}
+
+h2 {
+  font-family: $al-bold;
+  font-size: 1.3em;
+  color: $green;
 }
 
 /* Footer */
