@@ -73,18 +73,26 @@
  * @ingroup themeable
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+<!-- header -->
+<header id="navbar" role="banner">
   <div class="container">
 		<div class="header-logo row">
       <?php if ($logo): ?>
-      <a class="logo navbar-btn col-md-9" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-        <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-      </a>
+        <div class="col-md-9">
+          <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+          </a>
+        </div>
       <?php endif; ?>
 	
 		</div>
-    <div class="navbar-header">
+    
+  </div>
+</header>
 
+<!-- nav -->
+<div class="<?php print $navbar_classes; ?>">
+  <div class="container">
       <?php if (!empty($site_name)): ?>
       <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
@@ -96,7 +104,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-    </div>
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse">
@@ -114,17 +121,16 @@
       </div>
     <?php endif; ?>
   </div>
-</header>
-
-<div class="main-container container">
-
-  <header role="banner" id="page-header">
+</div>
+<div class="main-container">
+<div class="container">
+  <div role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
+  </div> <!-- /#page-header -->
 
   <div class="row">
 
@@ -142,9 +148,9 @@
 				<a id="main-content"></a>
 				<?php print render($title_prefix); ?>
 				<?php //if( !drupal_is_front_page()) : ?>
-					<div class="main-content-margin">
+					<div class="main-content-padding">
 						<?php if (!empty($title) && !drupal_is_front_page()): ?>
-							<h1 class="page-header"><?php print $title; ?></h1>
+							<h1><?php print $title; ?></h1>
 						<?php endif; ?>
 						<?php print render($title_suffix); ?>
 						<?php print $messages; ?>
@@ -175,16 +181,17 @@
 
   </div>
 </div>
+</div>
 <footer class="footer container">
 	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
 		<div class="row">
 			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-8 footer-logos">
+				<div class="col-md-12 footer-logos">
 					<?php print render($page['footer_logos']); ?>
 				</div>
 			<?php endif; ?>
 			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 footer-legal">
+				<div class="col-md-12 footer-legal">
 					<?php print render($page['footer_legal']); ?>
 				</div>
 			<?php endif; ?>

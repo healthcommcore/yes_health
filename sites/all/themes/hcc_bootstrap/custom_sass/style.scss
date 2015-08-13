@@ -1,19 +1,23 @@
-@import '../bootstrap_sass/bootstrap.scss';
+//@import '../bootstrap_sass/bootstrap.scss';
 @import 'fonts.scss';
 
 /* Variables */
 $al-thin : 'alegreya_sansthin';
 $al-lt : 'alegreya_sanslight';
+$al-lt-ital : 'alegreya_sanslight_italic';
 $al-reg : 'alegreya_sansregular';
 $al-ital : 'alegreya_sansitalic';
 $al-med : 'alegreya_sansmedium';
 $al-bold : 'alegreya_sansbold';
 $alsc-reg : 'alegreya_sans_scregular';
+$alsc-med : 'alegreya_sans_scmedium';
 $alsc-bold : 'alegreya_sans_scbold';
 
 $rust : #B7331F;
 $green : #79A718;
 $link : #1766AB;
+$lt-green: #99CF50;
+$dk-green: #629D22;
 
 /* Mixins */
 
@@ -22,12 +26,17 @@ $link : #1766AB;
 	list-style: none;
 }
 
+@mixin icon ($offset) {
+  background: url('../images/button_icons') $offset 0 no-repeat;
+}
+
 /* Overall styles */
 
 body {
   font-family: $al-lt;
   font-size: 3.3em;
   line-height: 1.4em;
+  background: $green;
 }
 
 a {
@@ -43,15 +52,19 @@ p {
 
 strong {
   font-family: $al-med;
-}
-
-strong {
   font-weight: normal;
 }
 
+em {
+  font-family: $al-lt-ital;
+  font-style: normal;
+}
+
 h1 {
+  font-family: $al-lt;
   font-size: 1.6em;
   color: $rust;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -59,6 +72,87 @@ h2 {
   font-size: 1.3em;
   color: $green;
 }
+
+/* Header */
+header {
+  background: -webkit-linear-gradient(54deg, $lt-green, $dk-green);
+  background: -o-linear-gradient(54deg, $lt-green, $dk-green);
+  background: -moz-linear-gradient(54deg, $lt-green, $dk-green);
+  background: linear-gradient(54deg, $lt-green, $dk-green);
+  border-bottom: #fff 3px solid;
+  padding: 39px 0 25px 0;
+}
+
+.logo {
+  display: block;
+}
+
+.navbar-btn { 
+  margin: 0;
+}
+
+/* Nav */
+
+.navbar {
+  border-radius: initial;
+  margin-bottom: 0;
+}
+
+.navbar-default {
+  background: url('../images/nav_bkgrd.jpg') 0 0 repeat-x;
+  border: none;
+}
+
+.navbar-nav > li {
+  margin: 0 30px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  text-decoration: none;
+  color: #fff;
+  font-family: $alsc-med; 
+  font-size: 0.8em;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+  background: #fff;
+  color: $link;
+}
+
+/* content */
+
+.main-container {
+  background: #fff;
+}
+
+.main-content-padding {
+  padding: 45px 60px 100px 60px;
+}
+
+.action-button {
+  text-align: center;
+  background: url('../images/button_bkgrd.jpg') 0 0 repeat-x;
+  padding: 15px 0;
+  .icon {
+    width:129px;
+    height:129px;
+  }
+  .signin {
+    @include icon(0);
+  }
+  .news {
+    @include icon(130px);
+  }
+  .contact {
+    @include icon(260px);
+  }
+  .feedback {
+    @include icon(390px);
+  }
+}
+
 
 /* Footer */
 
@@ -69,9 +163,28 @@ h2 {
 
 }
 
+.footer-logos {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.footer-logos a {
+}
+
+.footer-logos img {
+  display: block;
+  margin: 0 auto;
+}
+
 .footer-legal {
-    font-size: 1.3em;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0.7em;
     color: #fff;
+    nav {
+      margin: 30px 0;
+      line-height: 0.9em;
+    }
     p {
       margin: 0;
     }
@@ -79,12 +192,12 @@ h2 {
       color: #fff;
     }
 	ul {
+        display: inline-block;
 		padding-left: 0;
-		float: right;
 	}
 	li {
 		padding: 0 10px;
-		border-right: #fff 1px solid;
+		border-right: #fff 3px solid;
         @include menustyle;
 	}
 	li:first-child {
@@ -93,20 +206,20 @@ h2 {
 	li:last-child {
 		border: none;
 	}
-	.legal {
-		text-align: right;
-		font-size: 75%;
-        a {
-          text-decoration: underline;
-        }
+	.legal a {
+      font-family: $al-lt;
+      text-transform: capitalize;
 	}
 }
+/*
+*/
 
 
 /* Phone */
 
 @media (max-width: 767px) {
 
+/*
 .footer-logos {
     a {
       //display: inline-block;
@@ -131,4 +244,5 @@ h2 {
       text-align: center;
     }
   }
+*/
 }

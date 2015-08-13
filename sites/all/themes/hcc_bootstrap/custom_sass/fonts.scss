@@ -60,6 +60,18 @@
 }
 
 @font-face {
+    font-family: 'alegreya_sanslight_italic';
+    src: url('../fonts/AlegreyaSans-LightItalic-webfont.eot');
+    src: url('../fonts/AlegreyaSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AlegreyaSans-LightItalic-webfont.woff') format('woff'),
+         url('../fonts/AlegreyaSans-LightItalic-webfont.ttf') format('truetype'),
+         url('../fonts/AlegreyaSans-LightItalic-webfont.svg#alegreya_sanslight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'alegreya_sansthin';
     src: url('../fonts/AlegreyaSans-Thin-webfont.eot');
     src: url('../fonts/AlegreyaSans-Thin-webfont.eot?#iefix') format('embedded-opentype'),
@@ -98,6 +110,18 @@
 }
 
 */
+
+@font-face {
+    font-family: 'alegreya_sans_scmedium';
+    src: url('../fonts/AlegreyaSansSC-Medium-webfont.eot');
+    src: url('../fonts/AlegreyaSansSC-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AlegreyaSansSC-Medium-webfont.woff') format('woff'),
+         url('../fonts/AlegreyaSansSC-Medium-webfont.ttf') format('truetype'),
+         url('../fonts/AlegreyaSansSC-Medium-webfont.svg#alegreya_sans_scmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 @font-face {
     font-family: 'alegreya_sans_scbold';
