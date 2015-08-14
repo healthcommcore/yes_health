@@ -27,7 +27,7 @@ $dk-green: #629D22;
 }
 
 @mixin icon ($offset) {
-  background: url('../images/button_icons') $offset 0 no-repeat;
+  background: url('../images/button_icons.png') -1px $offset no-repeat;
 }
 
 /* Overall styles */
@@ -131,26 +131,51 @@ header {
   padding: 45px 60px 100px 60px;
 }
 
+.action-button-container {
+  text-align: center;
+}
+
 .action-button {
+  color: #fff;
+  font-size: 0.82em;
   text-align: center;
   background: url('../images/button_bkgrd.jpg') 0 0 repeat-x;
-  padding: 15px 0;
+  padding: 15px 60px;
+  position: relative;
+  display: inline-block;
+  margin: 40px auto;
   .icon {
+    float:left;
+    display: inline-block;
     width:129px;
     height:129px;
+    margin-top: -35px;
   }
   .signin {
     @include icon(0);
+    margin-left: -60%;
   }
   .news {
-    @include icon(130px);
+    @include icon(-130px);
+    margin-left: -35%;
   }
   .contact {
-    @include icon(260px);
+    @include icon(-260px);
+    margin-left: -50%;
   }
   .feedback {
-    @include icon(390px);
+    @include icon(-390px);
+    margin-left: -60%;
   }
+}
+
+.action-button:hover {
+  color: #fff;
+}
+
+.tolower {
+  font-family: $al-lt;
+  text-transform: capitalize;
 }
 
 
