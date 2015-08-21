@@ -6,6 +6,18 @@
  */
 
 /**
+ * Implementation of hook_theme()
+ */
+function hcc_bootstrap_theme() {
+  $items['user_login'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'hcc_bootstra') . '/templates',
+    'template' => 'user_login',
+  );
+  return $items;
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function hcc_bootstrap_preprocess_page(&$variables) {
