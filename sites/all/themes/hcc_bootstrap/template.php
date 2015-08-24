@@ -11,7 +11,7 @@
 function hcc_bootstrap_theme() {
   $items['user_login'] = array(
     'render element' => 'form',
-    'path' => drupal_get_path('theme', 'hcc_bootstra') . '/templates',
+    'path' => drupal_get_path('theme', 'hcc_bootstrap') . '/templates',
     'template' => 'user_login',
   );
   return $items;
