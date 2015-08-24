@@ -18,9 +18,19 @@ function hcc_bootstrap_theme() {
 }
 
 /**
+ * Implements hook_preprocess_user_login().
+ */
+function hcc_bootstrap_preprocess_user_login(&$vars) {
+  //print_r($vars['form']);
+  $vars['form']['name']['#title'] = 'User name';
+  $vars['form']['remember_me']['#title'] = 'Save this information so I stay signed in';
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function hcc_bootstrap_preprocess_page(&$variables) {
+  //print_r($variables);
   if (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = ' class="col-md-9 col-sm-12"';
   }
@@ -29,6 +39,9 @@ function hcc_bootstrap_preprocess_page(&$variables) {
 			array_splice( $variables['navbar_classes_array'], $index, 1);
 		}
 	}
+  if ($_GET['q'] == 'user') {
+    $variables['title'] = t('Sign in');
+  }
 }
 
 /**
