@@ -1,0 +1,107 @@
+<?php
+
+define('YES_EMAIL', 'YEShealth@dpcma.org');
+/**
+ * Implementation of hook_permission().
+ */
+function yes_care_feedback_permission() {
+  return array(
+    'access yes feedback form' => array(
+      'title' => t('Access care feedback form for YES Health participants'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu()
+ */
+function yes_care_feedback_menu () {
+  $items = array();
+  $items['care-feedback'] = array(
+    'title' => 'Care feedback',
+    'description' => 'Give us feedback on how your care has been',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('yes_care_feedback_form'),
+    'access arguments' => array('access yes feedback form'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme()
+ */
+function yes_care_feedback_theme() {
+  return array(
+    'yes_care_feedback_form' => array(
+      'arguments' => array('form' => NULL),
+      'template' => 'templates/yes_care_feedback_form',
+      'render element' => 'form'
+    )
+  );
+}
+
+/**
+ * Implements hook_form()
+ */
+function yes_care_feedback_form($form, &$form_state) {
+  $form['provider_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Provider name:'),
+    '#required' => TRUE
+  );
+
+  $form['provider_practice'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Provider practice:'),
+    '#required' => TRUE
+  );
+
+  $form['feedback_box'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Please provide your comments here:')
+  );
+
+  $form['buttons']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit your feedback')
+  );
+
+  return $form;
+}
+
+/**
+ * Implements hook_form_submit()
+ */
+function yes_care_feedback_form_submit($form, &$form_state) {
+  $to = 'dave_rothfarb@dfci.harvard.edu';
+  $from = YES_EMAIL;
+  $subject = 'Care feedback from YES Health website';
+  $email = "You have received a message from a YES Health web participant. Here are the details:\n\n"; 
+  $email .= "Provider name: " . $form_state['values']['provider_name'] . "\n";
+  $email .= "Provider practice: " . $form_state['values']['provider_practice'] . "\n";
+  $email .= "Feedback: " . $form_state['values']['feedback_box'];
+
+  $mssg = array(
+    'id' => '',
+    'to' => $to,
+    'subject' => $subject,
+    'body' => array($email),
+    'headers' => array(
+      'From' => $from,
+      'Sender' => $from,
+      'Return-Path' => $from
+    )
+  );
+
+  $system = drupal_mail_system('', '');
+  $mssg = $system->format($mssg);
+
+  if ($system->mail($mssg) ) {
+    drupal_set_message('Thank you for your feedback, your message was sent successfully!');
+  }
+  else {
+    drupal_set_message('A problem was encountered and your message could not be sent');
+  }
+}

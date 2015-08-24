@@ -1,0 +1,5 @@
+;$Id$
+name = YES Health care feedback form
+package = custom
+description = Form for YES Health participants to give feedback about their providers
+core = 7.x
