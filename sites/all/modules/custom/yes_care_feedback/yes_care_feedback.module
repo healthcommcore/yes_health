@@ -18,7 +18,7 @@ function yes_care_feedback_permission() {
 function yes_care_feedback_menu () {
   $items = array();
   $items['care-feedback'] = array(
-    'title' => 'Care feedback',
+    'title' => 'Comment on your care',
     'description' => 'Give us feedback on how your care has been',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('yes_care_feedback_form'),
@@ -49,18 +49,17 @@ function yes_care_feedback_form($form, &$form_state) {
   $form['provider_name'] = array(
     '#type' => 'textfield',
     '#title' => t('Provider name:'),
-    '#required' => TRUE
   );
 
   $form['provider_practice'] = array(
     '#type' => 'textfield',
     '#title' => t('Provider practice:'),
-    '#required' => TRUE
   );
 
   $form['feedback_box'] = array(
     '#type' => 'textarea',
-    '#title' => t('Please provide your comments here:')
+    '#title' => t('Please provide your comments here:'),
+    '#required' => TRUE
   );
 
   $form['buttons']['submit'] = array(
@@ -75,7 +74,7 @@ function yes_care_feedback_form($form, &$form_state) {
  * Implements hook_form_submit()
  */
 function yes_care_feedback_form_submit($form, &$form_state) {
-  $to = 'dave_rothfarb@dfci.harvard.edu';
+  $to = YES_EMAIL;
   $from = YES_EMAIL;
   $subject = 'Care feedback from YES Health website';
   $email = "You have received a message from a YES Health web participant. Here are the details:\n\n"; 

@@ -41,6 +41,9 @@ function hcc_bootstrap_preprocess_page(&$variables) {
   if ($_GET['q'] == 'user/login') {
     $variables['title'] = t('Sign in');
   }
+  if ($_GET['q'] == 'contact-us') {
+    $variables['title'] = t('Contact us');
+  }
 }
 
 /**

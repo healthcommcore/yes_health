@@ -6,7 +6,7 @@
 <div class="feedback-form callout-padding">
   <?php print render( $form['provider_name'] ); ?>
   <?php print render( $form['provider_practice'] ); ?>
-  <p>If you don't have this information, we still want your comments</p>
+  <p><small><em>If you don't have this information, we still want your comments</em></small></p>
   <?php print render( $form['feedback_box'] ); ?>
   <p><small><em>YES Health does not resolve individual health care or One Care disputes or problems directly. </em></small></p>
   <?php print render( $form['buttons']['submit'] ); ?>
