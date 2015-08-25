@@ -21,7 +21,6 @@ function hcc_bootstrap_theme() {
  * Implements hook_preprocess_user_login().
  */
 function hcc_bootstrap_preprocess_user_login(&$vars) {
-  //print_r($vars['form']);
   $vars['form']['name']['#title'] = 'User name';
   $vars['form']['remember_me']['#title'] = 'Save this information so I stay signed in';
 }
@@ -39,7 +38,7 @@ function hcc_bootstrap_preprocess_page(&$variables) {
 			array_splice( $variables['navbar_classes_array'], $index, 1);
 		}
 	}
-  if ($_GET['q'] == 'user') {
+  if ($_GET['q'] == 'user/login') {
     $variables['title'] = t('Sign in');
   }
 }

@@ -91,6 +91,23 @@ header {
   margin: 0;
 }
 
+.topmenu {
+  text-align: right;
+  .nav > li > a {
+    color: #fff;
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 0;
+  }
+  .nav > li > a:hover,
+  .nav > li > a:focus,
+  .nav > li > a.active-trail {
+    color: #333;
+    background: none;
+    text-decoration: underline;
+  }
+}
+
 /* Nav */
 
 .navbar {

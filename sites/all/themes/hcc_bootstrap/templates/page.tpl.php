@@ -84,7 +84,13 @@
           </a>
         </div>
       <?php endif; ?>
-	
+      <?php if (!empty($page['topmenu'])): ?>
+        <div class="col-md-3">
+          <div class="topmenu">
+            <?php print render($page['topmenu']); ?>
+          </div>
+        </div>
+      <?php endif; ?>
 		</div>
     
   </div>
