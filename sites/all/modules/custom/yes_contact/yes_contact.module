@@ -78,9 +78,9 @@ function yes_contact_form_submit($form, &$form_state) {
   $from = YES_EMAIL;
   $subject = 'Care feedback from YES Health website';
   $email = "You have received a message from a YES Health web participant. Here are the details:\n\n"; 
-  $email .= "Provider name: " . $form_state['values']['provider_name'] . "\n";
-  $email .= "Provider practice: " . $form_state['values']['provider_practice'] . "\n";
-  $email .= "Feedback: " . $form_state['values']['feedback_box'];
+  $email .= "Provider name: " . $form_state['values']['participant_name'] . "\n";
+  $email .= "Provider practice: " . $form_state['values']['participant_email'] . "\n";
+  $email .= "Feedback: " . $form_state['values']['message_box'];
 
   $mssg = array(
     'id' => '',
