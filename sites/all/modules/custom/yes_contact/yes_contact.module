@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * Implementation of hook_permission().
+ */
+function yes_contact_permission() {
+  return array(
+    'access yes contact form' => array(
+      'title' => t('Access contact form for YES Health participants'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu()
+ */
+function yes_contact_menu () {
+  $items = array();
+  $items['contact-us'] = array(
+    'title' => 'YES Health contact',
+    'description' => 'Contact us for feedback or issues',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('yes_contact_form'),
+    'access arguments' => array('access yes contact form'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme()
+ */
+function yes_contact_theme() {
+  return array(
+    'yes_contact_form' => array(
+      'arguments' => array('form' => NULL),
+      'template' => 'templates/yes_contact_form',
+      'render element' => 'form'
+    )
+  );
+}
+
+/**
+ * Implements hook_form()
+ */
+function yes_contact_form($form, &$form_state) {
+  $form['participant_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name:'),
+    '#required' => TRUE
+  );
+
+  $form['participant_email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Number or email for us to contact you'),
+    '#required' => TRUE
+  );
+
+  $form['message_box'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Message')
+  );
+
+  $form['buttons']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit')
+  );
+
+  return $form;
+}
+
+/**
+ * Implements hook_form_submit()
+ */
+function yes_contact_form_submit($form, &$form_state) {
+  $to = 'dave_rothfarb@dfci.harvard.edu';
+  $from = YES_EMAIL;
+  $subject = 'Care feedback from YES Health website';
+  $email = "You have received a message from a YES Health web participant. Here are the details:\n\n"; 
+  $email .= "Provider name: " . $form_state['values']['provider_name'] . "\n";
+  $email .= "Provider practice: " . $form_state['values']['provider_practice'] . "\n";
+  $email .= "Feedback: " . $form_state['values']['feedback_box'];
+
+  $mssg = array(
+    'id' => '',
+    'to' => $to,
+    'subject' => $subject,
+    'body' => array($email),
+    'headers' => array(
+      'From' => $from,
+      'Sender' => $from,
+      'Return-Path' => $from
+    )
+  );
+
+  $system = drupal_mail_system('', '');
+  $mssg = $system->format($mssg);
+
+  if ($system->mail($mssg) ) {
+    drupal_set_message('Thank you for your feedback, your message was sent successfully!');
+  }
+  else {
+    drupal_set_message('A problem was encountered and your message could not be sent');
+  }
+}

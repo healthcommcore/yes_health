@@ -2,7 +2,7 @@
 <p>We want to hear what you think about your health care and services under the One Care plan--including both positive and negative experiences you’ve had.</p>
 <p>Your feedback will help One Care providers know if they are meeting your needs. It will also help them to improve the care they provide. </p>
 <p><strong>Your comments are private.</strong> Health care providers will not be able to log in to this website and will not know who gave us feedback.</p>
-<p>If you can, please let us know:
+<p>If you can, please let us know:</p>
 <div class="feedback-form callout-padding">
   <?php print render( $form['provider_name'] ); ?>
   <?php print render( $form['provider_practice'] ); ?>

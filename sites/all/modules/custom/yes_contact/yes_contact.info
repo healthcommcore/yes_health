@@ -1,0 +1,5 @@
+;$Id$
+name = YES Health contact form
+package = custom
+description = Contact form for YES Health participants
+core = 7.x
