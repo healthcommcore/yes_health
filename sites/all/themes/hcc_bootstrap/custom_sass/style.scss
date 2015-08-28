@@ -206,6 +206,25 @@ header {
   text-transform: capitalize;
 }
 
+/* News */
+
+.node-news {
+  margin-bottom: 60px;
+}
+
+.field-name-field-news-image img {
+  float: left;
+  padding: 5px;
+  border: #bbb 1px solid;
+  margin: 0 15px 5px 0;
+  max-width: 100%;
+  display: block;
+}
+
+.field-name-field-news-date {
+  font-family: $al-lt-ital;
+  margin-bottom: 15px;
+}
 
 /* Footer */
 
