@@ -80,7 +80,7 @@
       <?php if ($logo): ?>
         <div class="col-md-9">
           <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+            <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('YES Health logo that links to YES Health website homepage'); ?>" />
           </a>
         </div>
       <?php endif; ?>
