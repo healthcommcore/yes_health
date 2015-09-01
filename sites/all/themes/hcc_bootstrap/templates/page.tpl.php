@@ -86,10 +86,12 @@
       <?php endif; ?>
       <?php if (!empty($page['topmenu'])): ?>
         <div class="col-md-3">
-          <div class="topmenu">
-            <?php print render($page['topmenu']); ?>
+          <nav role="navigation" aria-label="header menu">
+            <div class="topmenu">
+              <?php print render($page['topmenu']); ?>
+            </div>
           </div>
-        </div>
+        </nav>
       <?php endif; ?>
 		</div>
     
@@ -113,7 +115,7 @@
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse">
-        <nav role="navigation">
+        <nav role="navigation" aria-label="main menu">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
