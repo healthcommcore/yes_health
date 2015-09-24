@@ -30,6 +30,11 @@ $dk-green: #629D22;
   background: url('../images/button_icons.png') -1px $offset no-repeat;
 }
 
+@mixin extraspace($top, $bot) {
+  margin-top: $top;
+  margin-bottom: $bot;
+}
+
 /* Overall styles */
 
 body {
@@ -148,15 +153,61 @@ header {
   padding: 45px 60px 100px 60px;
 }
 
+#backtotop,
+#backtotop:hover {
+  background: $rust;
+}
+
+#backtotop {
+  color: #fff;
+  border: none;
+  height: auto;
+  padding: 5px 15px 8px 15px;
+  font-family: $al-bold;
+  line-height: 1.4em;
+}
+
 /* Home */
 
-.img-deck-container {
+.scroll-down {
+  text-align: center;
+  display: inline-block;
+  color: #7F7F7F;
+  position: absolute;
+  font-size: 0.7em;
+  left: 37%;
+  margin-top: 3px;
+  line-height: 0.5em;
 }
+
+.scroll-down-img {
+  background: url('../images/scroll_arrow.png') 0 0 no-repeat;
+  display: inline-block;
+  padding-bottom: 40px;
+  margin: 0 4px;
+  img {
+    margin-top: -40px;
+    height: 88px;
+    width: 88px;
+  }
+}
+
 
 .img-deck {
   background: #FBF5DB;
-  padding: 20px 30px;
+  padding: 55px 30px 30px 30px;
   margin: 50px 0; 
+}
+
+.home-deck-space {
+  @include extraspace(60px, 40px);
+}
+
+.video-space {
+  text-align: center;
+  font-family: $al-ital;
+
+  @include extraspace(60px, 90px);
 }
 
 .action-button-container {
@@ -286,6 +337,10 @@ header {
 /*
 */
 
+/* misc */
+.home-header-space {
+  @include extraspace(40px, 60px);
+}
 
 /* Phone */
 
