@@ -176,7 +176,7 @@ header {
   position: absolute;
   font-size: 0.7em;
   left: 37%;
-  margin-top: 3px;
+  margin-top: 17px;
   line-height: 0.5em;
 }
 
@@ -200,13 +200,12 @@ header {
 }
 
 .home-deck-space {
-  @include extraspace(60px, 40px);
+  @include extraspace(74px, 40px);
 }
 
 .video-space {
   text-align: center;
   font-family: $al-ital;
-
   @include extraspace(60px, 90px);
 }
 
@@ -275,6 +274,19 @@ header {
 .field-name-field-news-date {
   font-family: $al-lt-ital;
   margin-bottom: 15px;
+}
+
+/* About */
+.yes-team {
+  p {
+    content: "";
+    clear: left;
+    display: block;
+  }
+  img {
+    float: left;
+    margin: 14px 15px 30px 0;
+  }
 }
 
 /* Footer */
