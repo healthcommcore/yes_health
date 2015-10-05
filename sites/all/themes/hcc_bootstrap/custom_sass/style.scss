@@ -18,6 +18,7 @@ $green : #79A718;
 $link : #1766AB;
 $lt-green: #99CF50;
 $dk-green: #629D22;
+$blue: #0073BB;
 
 /* Mixins */
 
@@ -143,6 +144,27 @@ header {
   color: $link;
 }
 
+.navbar-toggle {
+  padding: 7px;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+  height: 3px;
+  width: 26px;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar {
+  background: $blue;
+}
 /* content */
 
 .main-container {
@@ -192,6 +214,23 @@ header {
   }
 }
 
+.video-coming-soon {
+  display: block;
+  margin: 60px auto 80px auto;
+  width: 50%;
+  height: 320px;
+  line-height: 320px;
+  border: #ddd 3px solid;
+  text-align: center;
+  p {
+    font-family: $al-ital;
+    color: $lt-green;
+    font-size: 140%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+}
 
 .img-deck {
   background: #FBF5DB;
@@ -367,7 +406,82 @@ header {
 /* Phone */
 
 @media (max-width: 767px) {
+  body {
+    font-size: 2.3em;
+  }
+  .main-content-padding {
+    padding: 5px 10px 20px 10px;
+  }
+  header {
+    padding: 15px 0 0 0;
+  }
+  .topmenu {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.0em;
+    .nav {
+      display: inline-block;
+    }
+    li {
+      float: left;
+    }
+    li:first-child {
+      margin-right: 25px;
+    }
+  }
 
+/* home */
+  .action-button {
+    font-size: 0.75em;
+    padding: 5px 45px;
+    .icon {
+      width: 70px;
+      height: 70px;
+      margin-top: -15px;
+      margin-bottom: -15px;
+    }
+    .signin,
+    .news,
+    .contact,
+    .feedback {
+      background-size: 100%;
+    }
+    .signin {
+      //margin-left: -60%;
+    }
+    .news {
+      margin-left: -28%;
+      margin-right: 4px;
+      background-position: -1px -70px;
+    }
+    .contact {
+      margin-left: -45%;
+      background-position: -1px -140px;
+    }
+    .feedback {
+      margin-left: -50%;
+      background-position: -1px -210px;
+    }
+  }
+  
+  .video-coming-soon {
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+  }
+
+  .home-deck-space {
+    margin: 0;
+  }
+
+  .img-deck {
+    margin: 30px 0;
+    padding: 18px 10px;
+    p {
+      margin: 0;
+    }
+  }
 /*
 .footer-logos {
     a {
