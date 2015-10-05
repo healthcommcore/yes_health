@@ -1,4 +1,4 @@
-//@import '../bootstrap_sass/bootstrap.scss';
+@import '../bootstrap_sass/bootstrap.scss';
 @import 'fonts.scss';
 
 /* Variables */
@@ -352,6 +352,16 @@ header {
 /* misc */
 .home-header-space {
   @include extraspace(40px, 60px);
+}
+
+.alert-warning {
+  color: #8F5A00;
+  padding: 20px 35px;
+}
+
+.smaller-text {
+  font-size: 80%;
+  line-height: 150%;
 }
 
 /* Phone */

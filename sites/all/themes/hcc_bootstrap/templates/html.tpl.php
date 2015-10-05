@@ -53,8 +53,8 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
-    <script src="<?php echo drupal_get_path('theme', 'hcc_bootstrap') . 'js/html5shiv.min.js'; ?>"></script>
-    <script src="<?php echo drupal_get_path('theme', 'hcc_bootstrap') . 'js/respond.min.js'; ?>"></script>
+    <script src="http://hccprod1.dfci.harvard.edu/resources/js/html5shiv.min.js"></script>
+    <script src="http://hccprod1.dfci.harvard.edu/resources/js/respond.min.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
@@ -79,7 +79,7 @@
 	var height = $(window).height();
 	var xPos = window.screenX + (window.outerWidth - width) / 2;
 	var yPos = window.screenY + (window.outerHeight - height) / 2;;
-	var options = "scrollbars=yes|no|1|0,resizable=yes,menubar=yes,toolbar=yes,status=yes,location=yes," + 
+	var options = "scrollbars, resizable ,menubar, toolbar, status,location," + 
 		"height=" + height + ",width=" + width + 
 		",top=" + yPos + ",left=" + xPos;
 	for(var i = 0; i < extLinks.length; i++){
