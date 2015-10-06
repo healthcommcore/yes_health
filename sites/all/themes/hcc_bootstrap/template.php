@@ -30,7 +30,11 @@ function hcc_bootstrap_preprocess_user_login(&$vars) {
  */
 function hcc_bootstrap_preprocess_page(&$variables) {
   drupal_add_js('http://hccprod1.dfci.harvard.edu/resources/js/bootstrap.min.js', 'external');
-  //print_r($variables);
+  /*
+  echo "<pre>";
+  print_r($variables);
+  echo "</pre>";
+   */
   if (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = ' class="col-md-9 col-sm-12"';
   }

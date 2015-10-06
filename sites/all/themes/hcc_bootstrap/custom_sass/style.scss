@@ -394,6 +394,7 @@ header {
 }
 
 .alert-warning {
+  margin: 30px 0 35px 0;
   color: #8F5A00;
   padding: 20px 35px;
 }
@@ -403,23 +404,82 @@ header {
   line-height: 150%;
 }
 
-/* Phone */
-
-@media (max-width: 767px) {
-  body {
-    font-size: 2.3em;
+/* Tablet landscape  ONLY*/
+@media (max-width: 1199px) and (min-width: 992px) {
+  .main-content-padding {
+    padding: 30px;
   }
+
+  .scroll-down {
+    left: 34%;
+  }
+
+/* Top nav */
+  .topmenu {
+    font-size: 80%;
+    line-height: 1.4em;
+  }
+
+/* Nav */
+  .navbar-nav > li {
+    margin: 0 15px;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    font-size: 73%;
+  }
+
+  .video-coming-soon {
+    width: 58%;
+    height: 300px;
+    line-height: 300px;
+  }
+
+}
+
+
+/* Tablet portrait ONLY */
+@media (max-width: 991px) and (min-width: 768px) {
+  /*
+  */
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-collapse.collapse.in,
+  .navbar-header .collapse,
+  .navbar-toggle {
+    display: block !important;
+  }
+
+  .navbar-nav > li {
+    float: none;
+  }
+
+  .video-coming-soon {
+    width: 67%;
+    height: 280px;
+    line-height: 280px;
+  }
+}
+
+@media (max-width: 991px) {
+
   .main-content-padding {
     padding: 5px 10px 20px 10px;
   }
+
   header {
-    padding: 15px 0 0 0;
+    padding: 30px 0 10px 0;
   }
+  
+
+/* Top nav */
   .topmenu {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 1.0em;
+    line-height: 1.1em;
     .nav {
       display: inline-block;
     }
@@ -430,6 +490,62 @@ header {
       margin-right: 25px;
     }
   }
+
+/* Nav */
+  .navbar-nav {
+    margin: 20px 0;
+    li {
+      margin: 0;
+    }
+    li a {
+      padding: 12px;
+    }
+  }
+
+  .navbar-default {
+    background-color: #89BF4E;
+    border-bottom: $blue 3px solid;
+  }
+
+  .container > .navbar-collapse {
+    margin-top: 43px;
+    border: none;
+    padding: 0 0 0 12px;
+  }
+
+  .navbar-default .navbar-nav > .active > a, 
+  .navbar-default .navbar-nav > .active > a:hover, 
+  .navbar-default .navbar-nav > .active > a:focus {
+    background: none;
+    color: #333;
+    font-family: $al-bold;
+  }
+}
+
+
+/* Tablet portrait and Phone */
+
+@media (max-width: 767px) {
+  body {
+    font-size: 2.3em;
+  }
+
+  header {
+    padding: 15px 0 0 0;
+  }
+  
+/* Top nav */
+  .topmenu {
+    margin-top: 20px;
+    font-size: 1.0em;
+    line-height: 1.2em;
+  }
+
+/* Nav */
+  .navbar-default .navbar-nav > li > a {
+    font-size: 100%;
+  }
+
 
 /* home */
   .action-button {
@@ -488,39 +604,7 @@ header {
     }
   }
 
-/* Nav */
-  .navbar-nav {
-    margin: 20px 0;
-    li {
-      margin: 0;
-    }
-    li a {
-      padding: 12px;
-    }
-  }
 
-  .navbar-default {
-    background-color: #89BF4E;
-    border-bottom: $blue 3px solid;
-  }
-
-  .container > .navbar-collapse {
-    margin-top: 43px;
-    border: none;
-    padding: 0 0 0 12px;
-  }
-
-  .navbar-default .navbar-nav > li > a {
-    font-size: 100%;
-  }
-
-  .navbar-default .navbar-nav > .active > a, 
-  .navbar-default .navbar-nav > .active > a:hover, 
-  .navbar-default .navbar-nav > .active > a:focus {
-    background: none;
-    color: #333;
-    font-family: $al-bold;
-  }
 
   .alert-warning {
     padding: 12px 20px;
