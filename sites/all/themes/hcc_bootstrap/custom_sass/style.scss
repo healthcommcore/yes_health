@@ -423,6 +423,9 @@ header {
   padding: 20px 35px;
 }
 
+div.tooltip-inner {
+  display: none;
+}
 
 /* Tablet landscape  ONLY*/
 @media (max-width: 1199px) and (min-width: 992px) {
@@ -431,13 +434,13 @@ header {
   }
 
   .scroll-down {
-    left: 34%;
+    left: 36%;
   }
 
 /* Top nav */
   .topmenu {
-    font-size: 80%;
-    line-height: 1.4em;
+    font-size: 100%;
+    line-height: 2.2em;
   }
 
 /* Nav */
@@ -446,7 +449,7 @@ header {
   }
 
   .navbar-default .navbar-nav > li > a {
-    font-size: 73%;
+    font-size: 120%;
   }
 
   .video-coming-soon {
@@ -547,7 +550,7 @@ header {
 
 @media (max-width: 767px) {
   body {
-    font-size: 2.3em;
+    font-size: 1.1em;
   }
 
   header {
@@ -561,11 +564,13 @@ header {
     line-height: 1.2em;
   }
 
-/* Nav */
+/* 
+Nav
   .navbar-default .navbar-nav > li > a {
-    font-size: 100%;
+    //font-size: 100%;
   }
 
+*/
 
 /* home */
   .action-button {
@@ -644,6 +649,7 @@ header {
       margin-right: 20px;
     }
   }
+
 /*
 .footer-logos {
     a {

@@ -134,7 +134,7 @@
 <div class="main-container">
 <div class="container">
   <?php if (!empty($page['text_size'])): ?>
-    <div class="text-size">
+    <div class="text-size hidden-xs">
       <?php print render($page['text_size']); ?>
     </div>
   <?php endif; ?>
