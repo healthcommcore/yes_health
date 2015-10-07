@@ -161,7 +161,7 @@
 						<?php endif; ?>
 						<?php print render($title_suffix); ?>
 						<?php print $messages; ?>
-						<?php if (!empty($tabs)): ?>
+						<?php if (!empty($tabs) && $is_admin): ?>
 							<?php print render($tabs); ?>
 						<?php endif; ?>
 						<?php if (!empty($page['help'])): ?>
