@@ -133,13 +133,11 @@
 </div>
 <div class="main-container">
 <div class="container">
-  <div role="banner" id="page-header">
-    <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-  </div> <!-- /#page-header -->
+  <?php if (!empty($page['text_size'])): ?>
+    <div class="text-size">
+      <?php print render($page['text_size']); ?>
+    </div>
+  <?php endif; ?>
 
   <div class="row">
 
