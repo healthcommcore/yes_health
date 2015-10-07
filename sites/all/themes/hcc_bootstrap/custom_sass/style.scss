@@ -427,6 +427,24 @@ div.tooltip-inner {
   display: none;
 }
 
+.text-size {
+  float: right;
+  padding: 10px 18px;
+  margin: 15px 0 15px 15px;
+  font-size: 120%;
+  h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: $rust;
+  }
+  ul {
+    padding-left: 0;
+  }
+  ul.textsize_list li {
+    margin-bottom: 8px;
+  }
+}
+
 /* Tablet landscape  ONLY*/
 @media (max-width: 1199px) and (min-width: 992px) {
   .main-content-padding {

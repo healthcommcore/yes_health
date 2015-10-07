@@ -133,11 +133,6 @@
 </div>
 <div class="main-container">
 <div class="container">
-  <?php if (!empty($page['text_size'])): ?>
-    <div class="text-size hidden-xs">
-      <?php print render($page['text_size']); ?>
-    </div>
-  <?php endif; ?>
 
   <div class="row">
 
@@ -154,6 +149,11 @@
 				<?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
 				<a id="main-content"></a>
 				<?php print render($title_prefix); ?>
+        <?php if (!empty($page['text_size'])): ?>
+            <div class="text-size bg-warning hidden-xs">
+            <?php print render($page['text_size']); ?>
+            </div>
+        <?php endif; ?>
 				<?php //if( !drupal_is_front_page()) : ?>
 					<div class="main-content-padding">
 						<?php if (!empty($title) && !drupal_is_front_page()): ?>
