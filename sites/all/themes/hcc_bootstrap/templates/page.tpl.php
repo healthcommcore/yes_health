@@ -137,8 +137,8 @@
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
-      <div class="col-md-2 hidden-xs">
-        <div class="submenu" role="complementary">
+      <div class="col-md-2">
+        <div class="submenu bg-warning" role="complementary">
         <?php print render($page['sidebar_first']); ?>
         </div>  <!-- /#sidebar-first -->
       </div>
