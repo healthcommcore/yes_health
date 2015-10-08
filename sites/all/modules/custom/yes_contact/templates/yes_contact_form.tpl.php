@@ -1,4 +1,4 @@
-<h2>Need help? Have feedback for us? Looking to contact us?</h2>
+<h2>Need help? Have feedback for us?</h2>
 <p>If you have any questions or need help using this site, we are here to help! We will be sure to get back to you within 2 business days.</p>
 <p>To contact us, you can: </p>
 <ul>

@@ -91,7 +91,7 @@
 	var height = $(window).height();
 	var xPos = window.screenX + (window.outerWidth - width) / 2;
 	var yPos = window.screenY + (window.outerHeight - height) / 2;;
-	var options = "scrollbars, resizable ,menubar, toolbar, status,location," + 
+	var options = "scrollbars, resizable ,menubar, toolbar, status=0, location," + 
 		"height=" + height + ",width=" + width + 
 		",top=" + yPos + ",left=" + xPos;
 	for(var i = 0; i < extLinks.length; i++){
