@@ -57,18 +57,10 @@ function hcc_bootstrap_preprocess_page(&$variables) {
   }
 }
 
-function hcc_bootstrap_menu_alter(&$items) {
-  /*
-  echo '<pre>';
-  print_r($items);
-  echo '</pre>';
-   */
-}
-
 /**
  * Implements hook_menu_link
  */
-function hcc_bootstrap_assessment_menu_link(array $variables) {
+function hcc_bootstrap_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
