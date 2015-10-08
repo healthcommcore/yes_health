@@ -42,7 +42,7 @@ function hcc_bootstrap_preprocess_page(&$variables) {
   echo "</pre>";
    */
   if (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class'] = ' class="col-md-9 col-sm-12"';
+    $variables['content_column_class'] = ' class="col-md-10 col-sm-12"';
   }
 	if ( isset($variables['navbar_classes_array']) ) {
 		if ($index = array_search('container', $variables['navbar_classes_array']) ) {
@@ -57,6 +57,14 @@ function hcc_bootstrap_preprocess_page(&$variables) {
   }
 }
 
+function hcc_bootstrap_menu_alter(&$items) {
+  /*
+  echo '<pre>';
+  print_r($items);
+  echo '</pre>';
+   */
+}
+
 /**
  * Implements hook_menu_link
  */
@@ -64,6 +72,11 @@ function hcc_bootstrap_assessment_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
+  /*
+  echo '<pre>';
+  print_r($output);
+  echo '</pre>';
+   */
   if ($element['#below']) {
     // Prevent dropdown functions from being added to management menu so it
     // does not affect the navbar module.
@@ -95,4 +108,5 @@ function hcc_bootstrap_assessment_menu_link(array $variables) {
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+
 }

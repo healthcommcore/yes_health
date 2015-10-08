@@ -137,9 +137,11 @@
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <div class="col-md-2 hidden-xs">
+        <div class="submenu" role="complementary">
         <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
+        </div>  <!-- /#sidebar-first -->
+      </div>
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
