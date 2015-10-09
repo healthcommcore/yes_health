@@ -35,7 +35,8 @@ function hcc_bootstrap_form_alter(&$form, &$form_state, $formid) {
  * Implements hook_preprocess_page().
  */
 function hcc_bootstrap_preprocess_page(&$variables) {
-  drupal_add_js('http://hccprod1.dfci.harvard.edu/resources/js/bootstrap.min.js', 'external');
+  //drupal_add_js('http://hccprod1.dfci.harvard.edu/resources/js/bootstrap.min.js', 'external');
+  drupal_add_css('http://hccprod1.dfci.harvard.edu/resources/css/bootstrap.min.css', 'external');
   /*
   echo "<pre>";
   print_r($variables['page']['content']);
