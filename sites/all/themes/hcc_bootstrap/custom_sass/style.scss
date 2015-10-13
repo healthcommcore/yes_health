@@ -1,4 +1,4 @@
-@import '../bootstrap_sass/bootstrap.scss';
+//@import '../bootstrap_sass/bootstrap.scss';
 @import 'fonts.scss';
 
 /* Variables */
@@ -231,6 +231,8 @@ header {
   padding: 5px 15px 8px 15px;
   font-family: $al-bold;
   line-height: 1.4em;
+  right: 30px;
+  bottom: 15px;
 }
 
 /* Home */
