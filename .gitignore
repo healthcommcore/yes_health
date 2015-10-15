@@ -1,9 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 
-.*.swp
-.sass-cache
-node_modules
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
