@@ -153,7 +153,7 @@ header {
 }
 
 .navbar-nav > li {
-  margin: 0 28px;
+  margin: 0 20px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -190,6 +190,24 @@ header {
 
 .navbar-default .navbar-toggle:hover .icon-bar {
   background: $blue;
+}
+
+/* search */
+.yes-search { 
+  margin: 7px 0;
+  float: left;
+  .form-control {
+    height: auto;
+  }
+  .form-control.form-text {
+    width: 98%;
+  }
+  .input-group-btn {
+    width: auto;
+  }
+  .input-group {
+    width: 100%;
+  }
 }
 
 /* subnav */
@@ -623,6 +641,12 @@ div.tooltip-inner {
     font-family: $al-bold;
   }
 
+/* search */
+  .yes-search { 
+    margin: 6px 0 0 0;
+    width: 60%;
+  }
+
 /* submenu */
   .submenu {
     margin-top: 50px;
@@ -663,6 +687,12 @@ Nav
   }
 
 */
+  .yes-search { 
+    width: 70%;
+    .input-group-btn {
+      width: 60px;
+    }
+  }
 
 /* submenu */
   .submenu {

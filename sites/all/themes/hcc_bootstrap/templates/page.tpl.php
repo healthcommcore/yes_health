@@ -101,6 +101,8 @@
 <!-- nav -->
 <div class="<?php print $navbar_classes; ?>">
   <div class="container">
+    <div class="row">
+      <div class="col-md-9 ">
       <?php if (!empty($site_name)): ?>
       <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
@@ -129,7 +131,16 @@
         </nav>
       </div>
     <?php endif; ?>
-  </div>
+  </div><!-- col-md-9 -->
+  <div class="col-md-3">
+    <?php if (!empty($page['search'])): ?>
+      <div class="yes-search">
+      <?php print render($page['search']); ?>
+      </div>
+    <?php endif; ?>
+  </div><!-- col-md-3 -->
+  </div><!-- row -->
+  </div><!-- container -->
 </div>
 <div class="main-container">
 <div class="container">

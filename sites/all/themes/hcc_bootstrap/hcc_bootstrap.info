@@ -10,6 +10,7 @@ base theme = bootstrap
 
 regions[topmenu]        = 'Top menu'
 regions[navigation]     = 'Navigation'
+regions[search]         = 'Search'
 regions[text_size]      = 'Text size'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
