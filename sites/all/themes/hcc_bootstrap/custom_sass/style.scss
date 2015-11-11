@@ -196,11 +196,12 @@ header {
 .yes-search { 
   margin: 7px 0;
   float: left;
+  width: 95%;
   .form-control {
     height: auto;
   }
   .form-control.form-text {
-    width: 98%;
+    width: 97%;
   }
   .input-group-btn {
     width: auto;
@@ -613,7 +614,7 @@ div.tooltip-inner {
 
 /* Nav */
   .navbar-nav {
-    margin: 20px 0;
+    margin: 60px 0 20px;
     li {
       margin: 0;
     }
@@ -643,7 +644,7 @@ div.tooltip-inner {
 
 /* search */
   .yes-search { 
-    margin: 6px 0 0 0;
+    margin: 6px;
     width: 60%;
   }
 
