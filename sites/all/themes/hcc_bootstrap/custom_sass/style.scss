@@ -540,6 +540,12 @@ div.tooltip-inner {
   .topmenu {
     font-size: 100%;
     line-height: 2.2em;
+    .nav > li.last > a,
+    .nav > li.last > a:hover,
+    .nav > li.last > a:focus,
+    .nav > li.last > a.active-trail {
+      background-position: 100% 100%;
+    }
   }
 
 /* Nav */
