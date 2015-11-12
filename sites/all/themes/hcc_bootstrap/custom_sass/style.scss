@@ -129,13 +129,26 @@ header {
     color: #fff;
     font-size: 1.6em;
     display: inline-block;
-    padding: 0;
+    padding: 0 38px 0 0;
+    background: url('../images/topmenu_button_icons.png') no-repeat;
+  }
+  .nav > li.first > a,
+  .nav > li.first > a:hover,
+  .nav > li.first > a:focus,
+  .nav > li.first > a.active-trail {
+    background-position: 100% 0;
+  }
+  .nav > li.last > a,
+  .nav > li.last > a:hover,
+  .nav > li.last > a:focus,
+  .nav > li.last > a.active-trail {
+    background-position: 100% 108%;
   }
   .nav > li > a:hover,
   .nav > li > a:focus,
   .nav > li > a.active-trail {
     color: #333;
-    background: none;
+    background: url('../images/topmenu_button_icons.png') no-repeat;
     text-decoration: underline;
   }
 }
@@ -572,6 +585,12 @@ div.tooltip-inner {
     float: none;
   }
 
+  .topmenu {
+    .nav > li a {
+      line-height: 1.6em;
+    }
+  }
+
 /* subnav */
   .submenu {
     display: inline-block;
@@ -679,6 +698,9 @@ div.tooltip-inner {
     margin-top: 20px;
     font-size: 1.0em;
     line-height: 1.2em;
+    .nav > li a {
+      line-height: 1.9em;
+    }
   }
 
 /* 
