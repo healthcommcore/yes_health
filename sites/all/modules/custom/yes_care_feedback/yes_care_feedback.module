@@ -1,6 +1,7 @@
 <?php
 
-define('YES_EMAIL', 'YEShealth@dpcma.org');
+//define('YES_EMAIL', 'dave_rothfarb@dfci.harvard.edu');
+define('YES_EMAIL', 'YEShealth@dpcma.org, dave_rothfarb@dfci.harvard.edu');
 /**
  * Implementation of hook_permission().
  */
@@ -46,6 +47,7 @@ function yes_care_feedback_theme() {
  * Implements hook_form()
  */
 function yes_care_feedback_form($form, &$form_state) {
+  honeypot_add_form_protection($form, $form_state, array('honeypot', 'time_restriction'));
   $form['provider_name'] = array(
     '#type' => 'textfield',
     '#title' => t('Provider name:'),
