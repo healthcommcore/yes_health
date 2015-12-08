@@ -100,9 +100,9 @@ function yes_care_feedback_form_submit($form, &$form_state) {
   $mssg = $system->format($mssg);
 
   if ($system->mail($mssg) ) {
-    drupal_set_message('Thank you for your feedback, your message was sent successfully!');
+    drupal_set_message('Thank you for your feedback, your message was sent successfully!', 'status');
   }
   else {
-    drupal_set_message('A problem was encountered and your message could not be sent');
+    drupal_set_message('A problem was encountered and your message could not be sent', 'error');
   }
 }
