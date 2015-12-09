@@ -57,6 +57,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
+  <script src="<?php echo drupal_get_path('theme', 'hcc_bootstrap') . '/js/no_images_or_styles.js'; ?>"></script>
 
 <!-- Google Analytics -->
 <script>

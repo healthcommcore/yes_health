@@ -45,7 +45,7 @@ stylesheets[all][] = css/style.css
 ; ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = 'js/bootstrap.min.js'
-scripts[] = 'js/no_images_or_styles.js'
+; scripts[] = 'js/no_images_or_styles.js'
 ; 
 ; scripts[] = 'bootstrap/js/affix.js'
 ; scripts[] = 'bootstrap/js/alert.js'
