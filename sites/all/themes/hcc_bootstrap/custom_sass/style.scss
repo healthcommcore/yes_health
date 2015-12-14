@@ -526,6 +526,11 @@ div.tooltip-inner {
   }
 }
 
+.disable-visuals {
+  padding: 15px 30px;
+  font-size: 1.3em;
+}
+
 /* Tablet landscape  ONLY*/
 @media (max-width: 1199px) and (min-width: 992px) {
   .main-content-padding {

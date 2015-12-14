@@ -1,8 +1,8 @@
 (function($) {
-  var message = {
-    on: 'Turn off all styles and images',
-    off: 'Turn on all styles and images'
-  };
+  var message = [
+    'Turn on all styles and images',
+    'Turn off all styles and images'
+  ];
   var styles = $("link[type='text/css']");
   var images = $('img');
   var cookie = cookie_exists();
@@ -23,7 +23,8 @@
     $(trigger).on('click', function (e) {
       e.preventDefault();
       var option = (cookie_exists() == 1 ? 0 : 1);
-      console.log('Trigger: Click option: ' + option + ', Cookie: ' + cookie_exists());
+      //console.log('Trigger: Click option: ' + option + ', Cookie: ' + cookie_exists());
+      $(this).text(message[option]);
       manipulate_visuals(option);
     });
   });
@@ -48,13 +49,11 @@
       if (option == 0) {
         $(styles).remove();
         $(images).hide();
-        //$(trigger).text(message.off);;
         document.cookie = 'website_visuals=0';
       }
       else {
         $('head').append(styles);
         $(images).show();
-        //$(trigger).text(message.on);
         document.cookie = 'website_visuals=1';
       }
         console.log('Manipulate: Cookie: ' + cookie_exists());

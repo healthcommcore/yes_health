@@ -169,7 +169,7 @@
         <?php endif; ?>
 				<?php //if( !drupal_is_front_page()) : ?>
 					<div class="main-content-padding">
-            <a id="disable-visuals" class="disable-visuals" href="#">Turn off all styles and images</a>
+            <a id="disable-visuals" class="bg-warning disable-visuals" href="#">Turn off all styles and images</a>
 						<?php if (!empty($title) && !drupal_is_front_page()): ?>
 							<h1><?php print $title; ?></h1>
 						<?php endif; ?>
